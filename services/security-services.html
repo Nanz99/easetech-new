@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +25,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* Overlay */
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .banner-content {
@@ -48,7 +49,7 @@
         /* Section Styling */
         section {
             padding: 50px 20px;
-            margin-bottom: 40px; /* Thêm khoảng cách giữa các layout */
+            margin-bottom: 40px;
         }
 
         h2 {
@@ -68,11 +69,11 @@
             margin-bottom: 15px;
         }
 
-        /* Image Styling with Rounded Corners and Shadow */
+        /* Image Styling */
         img {
             border-radius: 15px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 100%; /* Giữ kích thước không vượt quá container */
+            max-width: 100%;
             height: auto;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -91,9 +92,41 @@
             .banner-content p {
                 font-size: 1rem;
             }
+
+            section {
+                padding: 30px 15px;
+            }
+
+            .row.g-4 {
+                row-gap: 30px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .banner-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .banner-content p {
+                font-size: 0.8rem;
+            }
+
+            img:hover {
+                transform: none;
+                box-shadow: none;
+            }
         }
     </style>
 </head>
+
 <body>
 <header>
     <div class="banner">
@@ -115,9 +148,6 @@
                     <h2>Pentest và Kiểm thử hệ thống</h2>
                     <p>
                         Dịch vụ pentest và kiểm thử hệ thống của Ease Tech là giải pháp toàn diện giúp doanh nghiệp bảo vệ hệ thống thông tin trước các cuộc tấn công mạng. Với đội ngũ chuyên gia giàu kinh nghiệm và công cụ kiểm thử hiện đại, chúng tôi thực hiện đánh giá sâu sắc và toàn diện hệ thống của bạn, từ mạng nội bộ, ứng dụng web, cơ sở dữ liệu đến các thiết bị IoT.
-                    </p>
-                    <p>
-                        Quá trình kiểm thử của chúng tôi bao gồm các giai đoạn: thu thập thông tin, lập kế hoạch kiểm thử, thực hiện kiểm thử và báo cáo kết quả. Chúng tôi sử dụng các phương pháp kiểm thử đa dạng như kiểm thử thâm nhập thủ công, kiểm thử tự động, kiểm thử hộp đen, hộp trắng và hộp xám để phát hiện các lỗ hổng bảo mật ở nhiều cấp độ khác nhau.
                     </p>
                 </div>
                 <div class="col-md-6 text-center">
@@ -155,9 +185,6 @@
                     <p>
                         Thay vì chờ đợi các cuộc tấn công xảy ra, dịch vụ Red Team của Ease Tech giúp bạn chủ động phát hiện và khắc phục các lỗ hổng bảo mật. Chúng tôi sẽ đóng vai trò là những kẻ tấn công tinh vi để tìm kiếm và khai thác mọi lỗ hổng bảo mật trong hệ thống của bạn.
                     </p>
-                    <p>
-                        Dịch vụ của chúng tôi được tùy biến để phù hợp với từng doanh nghiệp, giúp bạn chủ động phòng ngừa các cuộc tấn công mạng và bảo vệ tài sản thông tin của mình.
-                    </p>
                 </div>
                 <div class="col-md-6 text-center">
                     <img src="https://ictv.1cdn.vn/2023/07/22/anh-man-hinh-2023-07-22-luc-09.37.05.png" alt="Redteam" class="img-fluid">
@@ -179,9 +206,6 @@
                     <p>
                         Khi sự cố an ninh mạng xảy ra, Ease Tech sẽ là người bạn đồng hành đáng tin cậy của bạn. Chúng tôi cung cấp dịch vụ ứng phó sự cố chuyên nghiệp, giúp bạn nhanh chóng phát hiện và xử lý các sự cố an toàn thông tin.
                     </p>
-                    <p>
-                        Dịch vụ của chúng tôi bao gồm toàn bộ quá trình ứng phó sự cố, từ phát hiện đến khắc phục, giúp bạn bảo vệ tài sản thông tin của mình.
-                    </p>
                 </div>
             </div>
         </div>
@@ -190,4 +214,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
