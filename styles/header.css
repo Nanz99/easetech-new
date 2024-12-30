@@ -1,0 +1,92 @@
+nav.navbar {
+    background-color: #ffffff;
+}
+nav.navbar .navbar-brand .logo {
+    height: 40px;
+}
+nav.navbar .nav-link {
+    color: #333333 !important;
+    font-weight: 500;
+    margin: 0 10px;
+    white-space: nowrap;
+}
+nav.navbar .nav-link:hover {
+    color: #ff4d4f !important;
+}
+nav.navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border: none;
+    text-align: center;
+}
+nav.navbar .dropdown-menu .dropdown-item {
+    padding: 10px 20px;
+    color: #333333;
+}
+nav.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #ff4d4f;
+    color: #ffffff;
+}
+nav.navbar .dropdown-menu.show {
+    display: block;
+}
+nav.navbar .flag-icon {
+    width: 24px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    nav.navbar {
+        background-color: #003366;
+    }
+    nav.navbar .navbar-toggler {
+        color: #333333;
+    }
+    nav.navbar .navbar-nav {
+        text-align: center;
+        width: 100%;
+    }
+    nav.navbar .navbar-nav .nav-link {
+        color: #333333 !important;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    nav.navbar .navbar-nav .nav-link:hover {
+        color: #ff4d4f !important;
+        background-color: #ffffff;
+    }
+    nav.navbar .navbar-nav .dropdown-menu {
+        display: none;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        box-shadow: none;
+    }
+    nav.navbar .navbar-nav .dropdown-menu .dropdown-item {
+        color: #333333 !important;
+        text-align: center;
+        padding: 10px 20px;
+    }
+    nav.navbar .navbar-nav .dropdown-menu .dropdown-item:hover {
+        color: #ff4d4f !important;
+        background-color: #ffffff;
+    }
+    nav.navbar .navbar-nav .dropdown-menu.show {
+        display: block;
+    }
+}
+.dropdown-menu {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*# sourceMappingURL=styles.css.map */
