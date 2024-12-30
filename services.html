@@ -52,74 +52,186 @@
         }
 
         /* Service Card */
-        .service-card {
-            text-align: center;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+
+        /*!* Button Styling *!*/
+        /*.btn-primary {*/
+        /*    margin-top: 1rem;*/
+        /*    background: linear-gradient(135deg, #007bff, #4a90e2);*/
+        /*    border: none;*/
+        /*    padding: 0.5rem 1rem;*/
+        /*    font-size: 0.9rem;*/
+        /*    border-radius: 5px;*/
+        /*    color: #fff;*/
+        /*    transition: background-color 0.3s ease, transform 0.2s ease;*/
+        /*}*/
+
+        /*.btn-primary:hover {*/
+        /*    background: linear-gradient(135deg, #0056b3, #3b7ed0);*/
+        /*    transform: scale(1.05);*/
+        /*}*/
+        /* From Uiverse.io by gharsh11032000 */
+        .animated-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 16px 36px;
+            border: 4px solid;
+            border-color: transparent;
+            font-size: 16px;
+            background-color: inherit;
+            border-radius: 100px;
+            font-weight: 600;
+            color: greenyellow;
+            box-shadow: 0 0 0 2px greenyellow;
+            cursor: pointer;
             overflow: hidden;
-            transition: all 0.3s ease-in-out;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .animated-button svg {
+            position: absolute;
+            width: 24px;
+            fill: greenyellow;
+            z-index: 9;
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .animated-button .arr-1 {
+            right: 16px;
+        }
+
+        .animated-button .arr-2 {
+            left: -25%;
+        }
+
+        .animated-button .circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background-color: greenyellow;
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .animated-button .text {
+            position: relative;
+            z-index: 1;
+            transform: translateX(-12px);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .animated-button:hover {
+            box-shadow: 0 0 0 12px transparent;
+            color: #212121;
+            border-radius: 12px;
+        }
+
+        .animated-button:hover .arr-1 {
+            right: -25%;
+        }
+
+        .animated-button:hover .arr-2 {
+            left: 16px;
+        }
+
+        .animated-button:hover .text {
+            transform: translateX(12px);
+        }
+
+        .animated-button:hover svg {
+            fill: #212121;
+        }
+
+        .animated-button:active {
+            scale: 0.95;
+            box-shadow: 0 0 0 4px greenyellow;
+        }
+
+        .animated-button:hover .circle {
+            width: 260px;
+            height: 220px;
+            opacity: 1;
+        }
+
+        .card {
+            margin-left: -1rem;
+            margin-right: -1rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            margin-bottom: 2rem;
+            width: 320px;
+            display: flex;
+            height: 500px;
+            flex-direction: column;
+            border-radius: 0.25rem;
+            background-color: rgba(17, 24, 39, 1);
             padding: 1.5rem;
-            min-height: 400px;
+        }
+
+        .header {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+
+        .desc {
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.625;
+            font-size: 20px;
+            color: rgba(156, 163, 175, 1);
         }
 
-        .service-card img {
-            max-width: 80px;
-            margin-bottom: 1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover img {
-            transform: scale(1.1);
-        }
-
-        .service-card h5 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: #007bff;
-        }
-
-        .service-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .lists {
+            margin-bottom: 1.5rem;
+            flex: 1 1 0%;
+            color: rgba(156, 163, 175, 1);
             text-align: left;
         }
+        ul.lists{
 
-        .service-card ul li {
-            margin: 0.5rem 0;
-            font-size: 0.9rem;
+            padding-left: 0;
+
         }
 
-        .service-card ul li i {
-            color: #4a90e2;
+        .lists .list {
+            margin-bottom: 0.5rem;
+            display: flex;
+            margin-left: 0.5rem
+        }
+
+        .lists .list svg {
+            height: 1.5rem;
+            width: 1.5rem;
+            flex-shrink: 0;
             margin-right: 0.5rem;
+            color: rgba(167, 139, 250, 1);
         }
 
-        /* Button Styling */
-        .btn-primary {
-            margin-top: 1rem;
-            background: linear-gradient(135deg, #007bff, #4a90e2);
+        .action {
             border: none;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-            border-radius: 5px;
-            color: #fff;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            outline: none;
+            display: inline-block;
+            border-radius: 0.25rem;
+            background-color: rgba(167, 139, 250, 1);
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: rgba(17, 24, 39, 1);
         }
 
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #0056b3, #3b7ed0);
-            transform: scale(1.05);
-        }
     </style>
 </head>
 
@@ -137,64 +249,200 @@
 <section class="services-section">
     <div class="container">
         <h2>Dịch vụ của Ease Tech</h2>
-        <div class="row gy-4">
+        <div class="row">
             <!-- Service Card 1 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="service-card">
-                    <img src="https://via.placeholder.com/100" alt="Tư Vấn Icon">
-                    <h5>Tư Vấn</h5>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Chuyển đổi số</li>
-                        <li><i class="fas fa-check-circle"></i> Tối ưu quy trình</li>
-                        <li><i class="fas fa-check-circle"></i> Thiết kế, mô hình hóa quy trình</li>
-                        <li><i class="fas fa-check-circle"></i> Phân tích dự báo</li>
+            <div class="col">
+                <div class="card">
+                    <div class="header text-center w-100 ">
+                        <img src="https://easetech.vn/wp-content/uploads/2024/08/tuvan.png" alt="Beginner Icon" style="height: 100px; width: 100px; margin: auto ; border-radius: 50%; ">
+                    </div>
+                    <p class="desc text-center">Tư Vấn</p>
+                    <ul class="lists">
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Chuyển đổi số</span>
+                        </li>
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Tối ưu quy trình</span>
+                        </li>
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Thiết kế, mô hình hóa quy trình</span>
+                        </li>
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>TPhân tích dự báo</span>
+                        </li>
                     </ul>
-                    <button type="button" class="btn btn-primary">Xem thêm</button>
+                    <button class="animated-button">
+                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                            ></path>
+                        </svg>
+                        <span class="text">Xem chi tiết</span>
+                        <span class="circle"></span>
+                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                            ></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
             <!-- Service Card 2 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="service-card">
-                    <img src="https://via.placeholder.com/100" alt="Triển Khai Icon">
-                    <h5>Triển Khai</h5>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Xây dựng hệ thống</li>
-                        <li><i class="fas fa-check-circle"></i> Thu nhập, chuyển đổi dữ liệu</li>
-                        <li><i class="fas fa-check-circle"></i> Đào tạo người dùng</li>
-                        <li><i class="fas fa-check-circle"></i> Hỗ trợ sau vận hành</li>
-                        <li><i class="fas fa-check-circle"></i> Bảo hành</li>
+            <div class="col">
+                <div class="card">
+                    <div class="header text-center w-100 ">
+                        <img src="https://easetech.vn/wp-content/uploads/2024/08/trienkhai.png" alt="Beginner Icon" style="height: 100px; width: 100px; margin: auto ; border-radius: 50%; ">
+                    </div>
+                    <p class="desc text-center">Triển Khai</p>
+                    <ul class="lists">
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Xây dựng hệ thống</span>
+                        </li>
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Thu nhập, chuyển đổi dữ liệu</span>
+                        </li>
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Đào tạo người dùng</span>
+                        </li>
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Bảo hành</span>
+                        </li>
                     </ul>
-                    <button type="button" class="btn btn-primary">Xem thêm</button>
+                    <button class="animated-button">
+                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                            ></path>
+                        </svg>
+                        <span class="text">Xem chi tiết</span>
+                        <span class="circle"></span>
+                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                            ></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
             <!-- Service Card 3 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="service-card">
-                    <img src="https://via.placeholder.com/100" alt="Hỗ Trợ Vận Hành Icon">
-                    <h5>Hỗ Trợ Vận Hành</h5>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Dịch vụ hỗ trợ tập trung từ xa</li>
-                        <li><i class="fas fa-check-circle"></i> Hỗ trợ vận hành hệ thống</li>
-                        <li><i class="fas fa-check-circle"></i> Sao lưu và phục hồi dữ liệu</li>
-                        <li><i class="fas fa-check-circle"></i> Nâng cấp sản phẩm</li>
+            <div class="col">
+                <div class="card">
+                    <div class="header text-center w-100 ">
+                        <img src="	https://easetech.vn/wp-content/uploads/2024/08/3.png" alt="Beginner Icon" style="height: 100px; width: 100px; margin: auto ; border-radius: 50%; ">
+                    </div>
+                    <p class="desc text-center">Hỗ Trợ Vận Hành</p>
+                    <ul class="lists">
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Dịch vụ hỗ trợ tập trung từ xa</span>
+                        </li>
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Hỗ trợ vận hành hệ thống</span>
+                        </li>
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Sao lưu và phục hồi dữ liệu</span>
+                        </li>
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Nâng cấp sản phẩm</span>
+                        </li>
                     </ul>
-                    <button type="button" class="btn btn-primary">Xem thêm</button>
+                    <button class="animated-button">
+                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                            ></path>
+                        </svg>
+                        <span class="text">Xem chi tiết</span>
+                        <span class="circle"></span>
+                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                            ></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
+
+
+
             <!-- Service Card 4 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="service-card">
-                    <img src="https://via.placeholder.com/100" alt="Điện Toán Đám Mây Icon">
-                    <h5>Điện Toán Đám Mây</h5>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Thiết kế hạ tầng IT Cloud</li>
-                        <li><i class="fas fa-check-circle"></i> Triển khai giải pháp Cloud</li>
+            <div class="col">
+                <div class="card">
+                    <div class="header text-center w-100 ">
+                        <img src="https://easetech.vn/wp-content/uploads/2024/08/4.png" alt="Beginner Icon" style="height: 100px; width: 100px; margin: auto ; border-radius: 50%; ">
+                    </div>
+                    <p class="desc text-center">Điện Toán Đám Mây</p>
+                    <ul class="lists">
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Thiết kế hạ tầng IT Cloud</span>
+                        </li>
+                        <li class="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Triển khai giải pháp Cloud</span>
+                        </li>
+
                     </ul>
-                    <button type="button" class="btn btn-primary">Xem thêm</button>
+                    <button class="animated-button">
+                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                            ></path>
+                        </svg>
+                        <span class="text">Xem chi tiết</span>
+                        <span class="circle"></span>
+                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                            ></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
+
         </div>
-    </div>
+        <!-- Service Card 5 -->
+
+
 </section>
 </body>
 
