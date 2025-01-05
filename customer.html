@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimasys Layout</title>
+    <link href="assets/vender/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/_style.css">
+    <style>
+        .client-logo {
+            max-width: 100%;
+            height: auto;
+            padding: 10px;
+        }
+        .client-row {
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+        .header-section {
+            position: relative;
+            background-image: url("https://gimasys.com/wp-content/uploads/2021/04/breadcrumb.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 300px; /* Adjust the height if needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+        }
+
+        .overlay h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .overlay p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="header-section">
+    <div class="overlay">
+        <div class="text-center">
+            <h1 id="headerTitle">KHÁCH HÀNG</h1>
+            <p id="breadcrumb"><a href="/index.html" class="link-home">Trang chủ</a> » khách hàng</p>
+        </div>
+    </div>
+</div>
+<div class="container text-center">
+    <h1 class="my-5">KHÁCH HÀNG TIÊU BIỂU CỦA EASETECH</h1>
+    <h6>Với nhiều năm kinh nghiệm, EASETECH đã trở thành đối tác tin cậy và uy tín cho nhiều dự án công nghệ thông tin, cung cấp các giải pháp chuyển đổi số cho doanh nghiệp. Bằng khát khao và đam mê sáng tạo không ngừng nghỉ, Gimasys luôn cố gắng thực hiện tốt nhất những cam kết của mình dành cho khách hàng và đối tác.</h6>
+
+    <div class="row client-row">
+        <div class="col-sm-6 col-md-3">
+            <img src="https://easetech.vn/wp-content/uploads/2024/09/1-3202.png" alt="Vietnam Airlines" class="client-logo">
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <img src="https://easetech.vn/wp-content/uploads/2024/09/z5811553765809_98630f1a9f864f2e4f35cfeac757452c.jpg" alt="Viettravel Airlines" class="client-logo">
+        </div>
+      <div class="col-sm-6 col-md-3">
+            <img src="https://easetech.vn/wp-content/uploads/2024/08/2-1.png" alt="Jetstar" class="client-logo">
+        </div>
+      <div class="col-sm-6 col-md-3">
+            <img src="https://easetech.vn/wp-content/uploads/2024/09/ngs-logo.png" alt="TNG" class="client-logo">
+        </div>
+    </div>
+
+    <div class="row client-row">
+      <div class="col-sm-6 col-md-3">
+            <img src="https://easetech.vn/wp-content/uploads/2024/09/ey.png" alt="PVcomBank" class="client-logo">
+        </div>
+
+    </div>
+</div>
+<div id="contact-container"></div>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch('services/contact-section.html') // Đường dẫn đến file header.html
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('contact-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
+</script>
+</body>
+</html>
