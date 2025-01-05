@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giải pháp - Dịch vụ</title>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/_style.css">
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">-->
     <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Inline CSS -->
@@ -146,13 +147,16 @@
             flex-wrap: wrap;
             align-items: stretch;
             margin-bottom: 2rem;
-            width: 320px;
+            /*width: 320px;*/
+
             display: flex;
             height: 500px;
             flex-direction: column;
             border-radius: 0.25rem;
             background-color: rgba(17, 24, 39, 1);
             padding: 1.5rem;
+            margin-left: 5px;
+            /*margin-right: 5px;*/
         }
 
         .header {
@@ -196,21 +200,8 @@
             color: rgba(167, 139, 250, 1);
         }
 
-        .action {
-            border: none;
-            outline: none;
-            display: inline-block;
-            border-radius: 0.25rem;
-            background-color: rgba(167, 139, 250, 1);
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
-            padding-top: 0.75rem;
-            padding-bottom: 0.75rem;
-            text-align: center;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            color: rgba(17, 24, 39, 1);
-        }
+
+
         .hero-section {
             background: url('https://gimasys.com/wp-content/uploads/2021/04/BG1.jpg') no-repeat center center;
             background-size: cover;
@@ -222,34 +213,7 @@
             text-align: center;
             position: relative;
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.4);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        .btn-contact {
-            background-color: #dc3545;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            border-radius: 30px;
-        }
-        .btn-contact:hover {
-            background-color: #b52a37;
-        }
-        .btn-container{
-            display: flex;
-            align-content: center;
-            justify-content: center;
-        }
+
     </style>
 
 </head>
@@ -259,7 +223,7 @@
 <section class="hero-section ">
    <div class="container">
        <h1>Giải pháp</h1>
-       <p>Muốn khách hàng hài lòng và trung thành hơn? Giải pháp Contact Center của EaseTech sẽ giúp bạn làm điều đó. Với hệ thống Contact Center đa kênh, chúng tôi giúp doanh nghiệp tương tác với khách hàng một cách liền mạch và hiệu quả qua điện thoại, email, chat, và các kênh truyền thông xã hội. Nhờ đó, doanh nghiệp có thể nắm bắt nhu cầu của khách hàng nhanh chóng, cung cấp dịch vụ khách hàng chuyên nghiệp 24/7, và tăng cường sự hài lòng của khách hàng. EaseTech cam kết đồng hành cùng doanh nghiệp trong suốt quá trình triển khai và vận hành hệ thống, đảm bảo mọi hoạt động diễn ra trơn tru và hiệu quả.
+       <p class="">Muốn khách hàng hài lòng và trung thành hơn? Giải pháp Contact Center của EaseTech sẽ giúp bạn làm điều đó. Với hệ thống Contact Center đa kênh, chúng tôi giúp doanh nghiệp tương tác với khách hàng một cách liền mạch và hiệu quả qua điện thoại, email, chat, và các kênh truyền thông xã hội. Nhờ đó, doanh nghiệp có thể nắm bắt nhu cầu của khách hàng nhanh chóng, cung cấp dịch vụ khách hàng chuyên nghiệp 24/7, và tăng cường sự hài lòng của khách hàng. EaseTech cam kết đồng hành cùng doanh nghiệp trong suốt quá trình triển khai và vận hành hệ thống, đảm bảo mọi hoạt động diễn ra trơn tru và hiệu quả.
        </p>
    </div>
 </section>
@@ -270,7 +234,7 @@
         <h2>Dịch vụ của Ease Tech</h2>
         <div class="row">
             <!-- Service Card 1 -->
-            <div class="col">
+            <div class="col-md-3">
                 <div class="card">
                     <div class="header text-center w-100 ">
                         <img src="https://easetech.vn/wp-content/uploads/2024/08/tuvan.png" alt="Beginner Icon" style="height: 100px; width: 100px; margin: auto ; border-radius: 50%; ">
@@ -319,7 +283,7 @@
                 </div>
             </div>
             <!-- Service Card 2 -->
-            <div class="col">
+            <div class="col-md-3">
                 <div class="card">
                     <div class="header text-center w-100 ">
                         <img src="https://easetech.vn/wp-content/uploads/2024/08/trienkhai.png" alt="Beginner Icon" style="height: 100px; width: 100px; margin: auto ; border-radius: 50%; ">
@@ -351,7 +315,7 @@
                             <span>Bảo hành</span>
                         </li>
                     </ul>
-                    <button class="animated-button">
+                    <button class="animated-button" onclick="window.location.href='services/implementation.html'">
                         <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                             <path
                                     d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
@@ -368,7 +332,7 @@
                 </div>
             </div>
             <!-- Service Card 3 -->
-            <div class="col">
+            <div class="col-md-3">
                 <div class="card">
                     <div class="header text-center w-100 ">
                         <img src="	https://easetech.vn/wp-content/uploads/2024/08/3.png" alt="Beginner Icon" style="height: 100px; width: 100px; margin: auto ; border-radius: 50%; ">
@@ -400,7 +364,7 @@
                             <span>Nâng cấp sản phẩm</span>
                         </li>
                     </ul>
-                    <button class="animated-button">
+                    <button class="animated-button" onclick="window.location.href='services/operational-support.html'">
                         <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                             <path
                                     d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
@@ -420,7 +384,7 @@
 
 
             <!-- Service Card 4 -->
-            <div class="col">
+            <div class="col-md-3">
                 <div class="card">
                     <div class="header text-center w-100 ">
                         <img src="https://easetech.vn/wp-content/uploads/2024/08/4.png" alt="Beginner Icon" style="height: 100px; width: 100px; margin: auto ; border-radius: 50%; ">
@@ -441,7 +405,7 @@
                         </li>
 
                     </ul>
-                    <button class="animated-button">
+                    <button class="animated-button" onclick="window.location.href='services/cloud-computing.html'">
                         <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                             <path
                                     d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
@@ -463,29 +427,61 @@
 
     </div>
 </section>
-<section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content text-center  mx-auto">
-        <h1 class="display-4 fw-bold">LIÊN HỆ VỚI EASETECH</h1>
-        <p class="lead">Liên hệ ngay để được hỗ trợ nhanh chóng.</p>
-      <div class="btn-container">
-          <button class="animated-button" onclick="window.location.href='contact.html'">
-              <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                          d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-                  ></path>
-              </svg>
-              <span class="text">Liên hệ ngay</span>
-              <span class="circle"></span>
-              <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                          d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-                  ></path>
-              </svg>
-          </button>
-      </div>
-    </div>
-</section>
+<div id="contact-container"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch('services/contact-section.html') // Đường dẫn đến file header.html
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('contact-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
+    const translations = {
+        en: {
+            title: "Contact EASETECH",
+            description: "Contact us now for quick support.",
+            button: "Contact Now"
+        },
+        vi: {
+            title: "LIÊN HỆ VỚI EASETECH",
+            description: "Liên hệ ngay để được hỗ trợ nhanh chóng.",
+            button: "Liên hệ ngay"
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const languageSelector = document.getElementById("languageSelector");
+
+        // Hàm thay đổi nội dung theo ngôn ngữ
+        function setLanguage(lang) {
+            document.querySelectorAll("[data-key]").forEach(element => {
+                const key = element.getAttribute("data-key");
+                console.log(key);
+                console.log(key);
+                console.log(key);
+                console.log(key);
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        // Lắng nghe sự kiện thay đổi ngôn ngữ
+        languageSelector.addEventListener("change", (e) => {
+            const selectedLanguage = e.target.value;
+            setLanguage(selectedLanguage);
+        });
+
+        // Mặc định: Ngôn ngữ tiếng Việt
+        setLanguage("vi");
+    });
+</script>
 </body>
 
 </html>
