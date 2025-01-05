@@ -219,6 +219,7 @@
 </head>
 
 <body>
+<header></header>
 <!-- Hero Section -->
 <section class="hero-section ">
    <div class="container">
@@ -429,6 +430,19 @@
 </section>
 <div id="contact-container"></div>
 <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch('services/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.querySelector('header').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
     document.addEventListener("DOMContentLoaded", () => {
         fetch('services/contact-section.html') // Đường dẫn đến file header.html
             .then(response => {
