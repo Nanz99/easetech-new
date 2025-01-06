@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimasys Layout</title>
+    <link href="assets/vender/bootstrap.min.css" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="styles/_style.css">
+    <style>
+        .list-header {
+            border-radius: 30px;
+            border: 3px solid #1d3857;
+        }
+        .list-header .list-header-item {
+            position: relative;
+            padding: 15px;
+
+            animation: shakeY;
+            animation-duration: .5s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .list-header .list-header-item:hover {
+
+        }
+        .list-header .list-header-item img{
+            margin-bottom: 15px;
+        }
+        .list-header .list-header-item a{
+            color: inherit;
+        }
+        .list-header .list-header-item:not(:last-child)::after  {
+            position: absolute;
+            content: ' ';
+            width: 2px;
+            height: 60px;
+            background: #1d3857;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            z-index: 1;
+        }
+
+        #su-menh .__box{
+            border: 3px solid #1d3857;
+            border-radius: 30px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 513.25px;
+        }
+        #su-menh .__box:hover{
+            background-color: rgba(29, 56, 87, 0.1);
+            transition: background-color .7s;
+        }
+        #su-menh .__box .__list-detail{
+
+        }
+        #su-menh .__box .__list-detail > li{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<header></header>
+
+
+<div class="container mt-5">
+    <div class="row list-header">
+        <div class="col list-header-item ">
+            <a href="#gioi-thieu">
+                <img src="../assets/img/logo.png" style="height: 40px" alt="EaseTech" class="logo">
+            </a>
+            <a href="#gioi-thieu">
+                <h4 class="desc text-center">Về Easetech</h4>
+            </a>
+        </div>
+        <div class="col list-header-item">
+            <a href="#su-menh">
+                <img src="../assets/img/logo.png" style="height: 40px" alt="EaseTech" class="logo">
+            </a>
+            <a href="#su-menh">
+                <h4 class="desc text-center">Sứ mệnh</h4>
+            </a>
+        </div>
+        <div class="col list-header-item">
+            <a href="#doi-tac-va-khach-hang">
+                <img src="../assets/img/logo.png" style="height: 40px" alt="EaseTech" class="logo">
+            </a>
+            <a href="#doi-tac-va-khach-hang">
+                <h4 class="desc text-center">Đối tác và khách hàng</h4><a href="#su-menh">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div id="gioi-thieu" class="row" style="padding: 15px">
+
+        <div class="col-12">
+            <h1 class="desc text-center d-inline-block w-100">Về Easetech</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-8 text-left">
+                <br>
+                <span class="">
+                Ra đời từ năm 2021, Ease Tech tự hào là người bạn đồng hành tin cậy của doanh nghiệp vừa và nhỏ trên hành trình chinh phục thị trường. Với sứ mệnh kiến tạo một môi trường kinh doanh thông minh và hiệu quả, chúng tôi không ngừng nghiên cứu và phát triển các giải pháp công nghệ tiên tiến, giúp doanh nghiệp tối ưu hóa quy trình, tiết kiệm chi phí và nâng cao năng suất.
+             </span>
+                <br>
+                <br>
+                <span class="">
+                Bằng việc kết hợp kinh nghiệm chuyên sâu của đội ngũ chuyên gia và công nghệ hiện đại, Ease Tech cam kết cung cấp các giải pháp toàn diện, đáp ứng đa dạng nhu cầu của doanh nghiệp. Chúng tôi hiểu rằng, công nghệ không chỉ là công cụ, mà còn là cầu nối giúp doanh nghiệp thành công. Chính vì vậy, Ease Tech luôn đặt khách hàng làm trung tâm, sẵn sàng lắng nghe và thấu hiểu để đưa ra những giải pháp phù hợp nhất.
+            </span>
+            </div>
+            <div class="col-4" >
+                <img src="https://easetech.vn/wp-content/uploads/2024/09/banner_2.png" style="height: 100%; width: 100%; background-position: center; object-fit: cover"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="su-menh" style="padding: 15px">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="desc text-center d-inline-block w-100">Sứ mệnh</h1>
+            </div>
+        </div>
+
+        <div class="row align-items-stretch" >
+            <div class="col-6 g-col-6 h-100 animate__animated animate__fadeInLeft d-flex flex-column">
+                <div class="__box">
+                    <div style="margin-bottom: 20px">
+                        <img src="https://easetech.vn/wp-content/uploads/2024/09/core-1.png" alt="img-doi-voi-khach-hang">
+                    </div>
+
+                    <h4 class="desc text-center d-inline-block w-100">Đối với khách hàng</h4>
+                    <ul class="text-left __list-detail">
+                        <li>
+                            <h6 class="font-weight-bold">Đặt khách hàng là trung tâm:</h6>
+                            <span>
+                                    Luôn lắng nghe và thấu hiểu nhu cầu của khách hàng để đưa ra những giải pháp phù hợp và hiệu quả nhất.
+                                </span>
+                        </li>
+                        <li>
+                            <h6 class="font-weight-bold">Các cung cấp giải phải toàn diện:</h6>
+                            <span>
+                                    Không chỉ cung cấp sản phẩm mà còn cung cấp dịch vụ tư vấn, hỗ trợ kỹ thuật và bảo trì bảo hành chuyên nghiệp.
+                                </span>
+                        </li>
+                        <li>
+                            <h6 class="font-weight-bold">Cam kết chất lượng và hiệu quả:</h6>
+                            <span>
+                                    Đảm bảo các sản phẩm và dịch vụ đạt chất lượng cao, giúp khách hàng tối ưu hóa quy trình, tiết kiệm chi phí và nâng cao năng suất.
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 g-col-6 h-100 animate__animated animate__fadeInRight d-flex flex-column" style="flex: 1">
+                <div class="__box">
+                    <div style="margin-bottom: 20px">
+                        <img src="https://easetech.vn/wp-content/uploads/2024/09/core-2.png" alt="img-doi-voi-doi-tac">
+                    </div>
+
+                    <h4 class="desc text-center d-inline-block w-100">Đối với đối tác</h4>
+                    <ul class="text-left __list-detail">
+                        <li>
+                            <h6 class="font-weight-bold">Xây dựng mối quan hệ hợp tác lâu dài</h6>
+                            <span>
+                                    Tạo dựng một môi trường hợp tác win-win, cùng nhau phát triển và chia sẻ thành quả. Đoàn kết và sự cam kết với mục tiêu chung đã giúp chúng tôi đạt được nhiều thành công trong những năm qua.
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="contact-container"></div>
+
+<div id="footer"></div>
+
+
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/add_header.js"></script>
+<script src="js/add_footer.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch('services/contact-section.html') // Đường dẫn đến file header.html
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('contact-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
+</script>
+</body>
+</html>
