@@ -97,8 +97,8 @@
     <div class="banner">
         <div class="banner-overlay"></div>
         <div class="banner-content">
-            <h1>Điện toán đám mây</h1>
-            <p>Giải pháp tối ưu cho hạ tầng công nghệ thông tin</p>
+            <h1 data-key="Cloud Computing" >Điện toán đám mây</h1>
+            <p data-key="The optimal solution for IT infrastructure">Giải pháp tối ưu cho hạ tầng công nghệ thông tin</p>
         </div>
     </div>
 </header>
@@ -110,11 +110,11 @@
             <div class="row align-items-center">
                 <div class="col-md-6 px-4 text-center">
                     <span class="icon">☁️</span>
-                    <h2>Thiết kế hạ tầng Công nghệ thông tin</h2>
-                    <p>
-                        Ease Tech hiểu rằng mỗi doanh nghiệp có những yêu cầu khác nhau. Vì vậy, chúng tôi cung cấp dịch vụ thiết kế hạ tầng đám mây tùy biến, giúp doanh nghiệp xây dựng một hệ thống phù hợp với quy mô và đặc thù của mình.
+                    <h2 data-key="IT Infrastructure Design">Thiết kế hạ tầng Công nghệ thông tin</h2>
+                    <p data-key="Easetech understands that each business has unique requirements. Therefore, we offer customized cloud infrastructure design services to help businesses build a system tailored to their scale and specific needs.">
+                            Easetech hiểu rằng mỗi doanh nghiệp có những yêu cầu khác nhau. Vì vậy, chúng tôi cung cấp dịch vụ thiết kế hạ tầng đám mây tùy biến, giúp doanh nghiệp xây dựng một hệ thống phù hợp với quy mô và đặc thù của mình.
                     </p>
-                    <p>
+                    <p data-key="From selecting a cloud service provider to designing system architecture, we cater to all customer requirements.">
                         Từ việc lựa chọn nhà cung cấp dịch vụ đám mây đến việc thiết kế kiến trúc hệ thống, chúng tôi đều đáp ứng theo yêu cầu của khách hàng.
                     </p>
                 </div>
@@ -134,11 +134,11 @@
                 </div>
                 <div class="col-md-6 px-4">
                     <span class="icon">💻</span>
-                    <h2>Triển khai giải pháp phần mềm trên Cloud</h2>
-                    <p>
-                        Ease Tech mang đến giải pháp triển khai phần mềm ứng dụng trên Cloud một cách đơn giản và dễ sử dụng. Chúng tôi giúp doanh nghiệp bạn nhanh chóng đưa các ứng dụng vào hoạt động mà không cần phải đầu tư quá nhiều vào hạ tầng phần cứng và phần mềm.
+                    <h2 data-key="Deploying Software Solutions on the Cloud">Triển khai giải pháp phần mềm trên Cloud</h2>
+                    <p data-key="Easetech offers simple and user-friendly solutions for deploying software applications on the Cloud. We help your business quickly get applications up and running without requiring significant investment in hardware and software infrastructure.">
+                        Easetech mang đến giải pháp triển khai phần mềm ứng dụng trên Cloud một cách đơn giản và dễ sử dụng. Chúng tôi giúp doanh nghiệp bạn nhanh chóng đưa các ứng dụng vào hoạt động mà không cần phải đầu tư quá nhiều vào hạ tầng phần cứng và phần mềm.
                     </p>
-                    <p>
+                    <p data-key="With an intuitive interface and a clear deployment process, you can easily manage and adjust the system yourself.">
                         Với giao diện trực quan và quy trình triển khai rõ ràng, bạn có thể tự quản lý và điều chỉnh hệ thống một cách dễ dàng.
                     </p>
                 </div>
@@ -146,36 +146,12 @@
         </div>
     </section>
     <div id="contact-container"></div>
+    <div id="footer"></div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        fetch('header.html') // Đường dẫn đến file header.html
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.querySelector('header').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading header:', error));
-    });
-    document.addEventListener("DOMContentLoaded", () => {
-        fetch('contact-section.html') // Đường dẫn đến file header.html
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('contact-container').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading header:', error));
-    });
+<script src="js/common.js">
+
 </script>
 </body>
 </html>

@@ -1,6 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
     const dropdownToggles = document.querySelectorAll('.nav-item .dropdown-toggle');
-
+    console.log("hahahah")
     dropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             e.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
@@ -31,4 +30,3 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     });
-});

@@ -143,8 +143,8 @@
 <div class="banner">
     <div class="banner-overlay"></div>
     <div class="banner-content">
-        <h1>Hỗ trợ vận hành</h1>
-        <p>Cung cấp các giải pháp công nghệ hiện đại cho doanh nghiệp</p>
+        <h1 data-key="Operational Support">Hỗ trợ vận hành</h1>
+        <p  data-key="Providing modern technological solutions for businesses">Cung cấp các giải pháp công nghệ hiện đại cho doanh nghiệp</p>
     </div>
 </div>
 
@@ -156,11 +156,11 @@
                 🌐
             </div>
             <div class="card-content">
-                <h3>Hỗ trợ tập trung từ xa</h3>
-                <p>
+                <h3 data-key="Centralized Remote Support">Hỗ trợ tập trung từ xa</h3>
+                <p data-key="Remote support services help you resolve all technical issues quickly, efficiently, and securely.">
                     Dịch vụ hỗ trợ từ xa giúp bạn giải quyết mọi vấn đề kỹ thuật một cách nhanh chóng, hiệu quả và an toàn.
                 </p>
-                <p>
+                <p data-key="Modern technology and an experienced team are always ready to serve you.">
                     Công nghệ hiện đại và đội ngũ giàu kinh nghiệm luôn sẵn sàng phục vụ bạn.
                 </p>
                
@@ -173,11 +173,11 @@
                 🖥️
             </div>
             <div class="card-content">
-                <h3>Hỗ trợ vận hành hệ thống</h3>
-                <p>
+                <h3 data-key="System Operations Support">Hỗ trợ vận hành hệ thống</h3>
+                <p data-key="Help your business operate systems stably and efficiently with advanced technology.">
                     Giúp doanh nghiệp của bạn vận hành hệ thống một cách ổn định và hiệu quả bằng công nghệ tiên tiến.
                 </p>
-                <p>
+                <p data-key="Ensure absolute security for your data.">
                     Đảm bảo bảo mật tuyệt đối cho dữ liệu của bạn.
                 </p>
                
@@ -190,11 +190,11 @@
                 🔧
             </div>
             <div class="card-content">
-                <h3>Cập nhật & sửa lỗi</h3>
-                <p>
+                <h3 data-key="Updates & Bug Fixes">Cập nhật & sửa lỗi</h3>
+                <p data-key="Protect your system with regular patch updates and bug fixing services.">
                     Bảo vệ hệ thống của bạn với dịch vụ cập nhật bản vá và sửa lỗi thường xuyên.
                 </p>
-                <p>
+                <p data-key="Safety and ensuring optimal system performance.">
                     An toàn và đảm bảo hiệu suất hệ thống tối ưu.
                 </p>
                
@@ -207,11 +207,11 @@
                 💾
             </div>
             <div class="card-content">
-                <h3>Sao lưu & phục hồi dữ liệu</h3>
-                <p>
+                <h3 data-key="Data Backup & Recovery">Sao lưu & phục hồi dữ liệu</h3>
+                <p data-key="Automated backup and quick recovery services help protect your business data securely.">
                     Dịch vụ sao lưu tự động và phục hồi nhanh chóng giúp bạn bảo vệ dữ liệu doanh nghiệp an toàn.
                 </p>
-                <p>
+                <p data-key="Your data is always under control.">
                     Dữ liệu của bạn luôn trong tầm kiểm soát.
                 </p>
                
@@ -219,37 +219,11 @@
         </div>
     </div>
     <div id="contact-container"></div>
+    <div id="footer"></div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        fetch('header.html') // Đường dẫn đến file header.html
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.querySelector('header').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading header:', error));
-    });
-    document.addEventListener("DOMContentLoaded", () => {
-        fetch('contact-section.html') // Đường dẫn đến file header.html
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('contact-container').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading header:', error));
-    });
-
+<script src="js/common.js">
 </script>
 </body>
 </html>

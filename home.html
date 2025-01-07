@@ -36,6 +36,7 @@
         }
         .list-header .list-header-item img{
             margin-bottom: 15px;
+            height: 150px;
         }
         .list-header .list-header-item a{
             color: inherit;
@@ -51,6 +52,19 @@
             right: 0;
             z-index: 1;
         }
+        @media (max-width: 767.98px) {
+            .list-header .list-header-item:not(:last-child)::after  {
+                position: absolute;
+                content: ' ';
+                width: 60px;
+                height: 2px;
+                background: #1d3857;
+                left: 50%;
+                top: 100%;
+                transform: translateX(-50%);
+                z-index: 1;
+            }
+        }
 
         #su-menh .__box{
             border: 3px solid #1d3857;
@@ -59,7 +73,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 513.25px;
+            height: 100%;
         }
         #su-menh .__box:hover{
             background-color: rgba(29, 56, 87, 0.1);
@@ -113,6 +127,15 @@
             transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
         }
 
+        .client-logo {
+            max-width: 100%;
+            height: auto;
+            padding: 10px;
+        }
+        .client-row {
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -126,8 +149,8 @@
                 <div class="container h-100">
                     <div class="row align-items-center h-100">
                         <div class="col text-left">
-                            <h2>Easetech cung cấp giải pháp toàn diện về Chuyển đổi số cho doanh nghiệp</h2>
-                            <p>Thiết lập tiêu chuẩn mới ngay ngày hôm nay! </p>
+                            <h2 data-key="Easetech provides comprehensive digital transformation solutions for businesses">Easetech cung cấp giải pháp toàn diện về Chuyển đổi số cho doanh nghiệp</h2>
+                            <p data-key="Set a new standard starting today!">Thiết lập tiêu chuẩn mới ngay ngày hôm nay! </p>
                         </div>
                     </div>
 
@@ -140,12 +163,16 @@
                 <div class="container h-100">
                     <div class="row align-items-center h-100">
                         <div class="col text-left">
-                            <h2>
-                                Gimasys - Đối tác Vàng
+                            <h2 >
+                                <span data-key="Easetech - The Golden Partner">
+                                    Gimasys - Đối tác Vàng
+                                </span>
                                 <br />
-                                của các doanh nghiệp
+                                <span data-key="for Businesses">
+                                    của các doanh nghiệp
+                                </span>
                             </h2>
-                            <p>Giúp doanh nghiệp triển khai Giải pháp CRM thành công!</p>
+                            <p data-key="Helping businesses successfully implement CRM solutions!">Giúp doanh nghiệp triển khai Giải pháp CRM thành công!</p>
                         </div>
                     </div>
 
@@ -159,155 +186,190 @@
 
 
 
-<div class="container mt-5">
+<div class="container p-4 mt-5">
     <div class="row list-header">
-        <div class="col list-header-item ">
+        <div class="col-12 col-md-4 list-header-item ">
             <a href="#gioi-thieu">
-                <img src="../assets/img/logo.png" style="height: 40px" alt="EaseTech" class="logo">
+                <img src="assets/svg/about-svgrepo-com.svg" style="height: 40px" alt="EaseTech" class="logo">
             </a>
             <a href="#gioi-thieu">
-                <h4 class="desc text-center">Về Easetech</h4>
+                <h4 class="desc text-center" data-key="About Easetech">Về Easetech</h4>
             </a>
         </div>
-        <div class="col list-header-item">
+        <div class="col-12 col-md-4 list-header-item">
             <a href="#su-menh">
-                <img src="../assets/img/logo.png" style="height: 40px" alt="EaseTech" class="logo">
+                <img src="assets/svg/dart-mission-goal-success-svgrepo-com.svg" style="height: 40px" alt="EaseTech" class="logo">
             </a>
             <a href="#su-menh">
-                <h4 class="desc text-center">Sứ mệnh</h4>
+                <h4 class="desc text-center" data-key="Mission">Sứ mệnh</h4>
             </a>
         </div>
-        <div class="col list-header-item">
+        <div class="col-12 col-md-4 list-header-item">
             <a href="#doi-tac-va-khach-hang">
-                <img src="../assets/img/logo.png" style="height: 40px" alt="EaseTech" class="logo">
+                <img src="assets/svg/handshake-svgrepo-com.svg" style="height: 40px" alt="EaseTech" class="logo">
             </a>
             <a href="#doi-tac-va-khach-hang">
-                <h4 class="desc text-center">Đối tác và khách hàng</h4><a href="#su-menh">
+                <h4 class="desc text-center" data-key="Partner and Customer" >Đối tác và khách hàng</h4>
             </a>
         </div>
     </div>
 </div>
-<div class="container">
-    <div id="gioi-thieu" class="row" style="padding: 15px">
 
+
+<div class="container"  id="gioi-thieu" style="padding: 15px">
+    <div class="row" >
         <div class="col-12">
-            <h1 class="desc text-center d-inline-block w-100">Về Easetech</h1>
+            <h1 class="desc text-center d-inline-block w-100" data-key="About Easetech">Về Easetech</h1>
         </div>
-
-        <div class="row">
-            <div class="col-8 text-left">
-                <br>
-                <span class="">
-                Ra đời từ năm 2021, Ease Tech tự hào là người bạn đồng hành tin cậy của doanh nghiệp vừa và nhỏ trên hành trình chinh phục thị trường. Với sứ mệnh kiến tạo một môi trường kinh doanh thông minh và hiệu quả, chúng tôi không ngừng nghiên cứu và phát triển các giải pháp công nghệ tiên tiến, giúp doanh nghiệp tối ưu hóa quy trình, tiết kiệm chi phí và nâng cao năng suất.
-             </span>
-                <br>
-                <br>
-                <span class="">
-                Bằng việc kết hợp kinh nghiệm chuyên sâu của đội ngũ chuyên gia và công nghệ hiện đại, Ease Tech cam kết cung cấp các giải pháp toàn diện, đáp ứng đa dạng nhu cầu của doanh nghiệp. Chúng tôi hiểu rằng, công nghệ không chỉ là công cụ, mà còn là cầu nối giúp doanh nghiệp thành công. Chính vì vậy, Ease Tech luôn đặt khách hàng làm trung tâm, sẵn sàng lắng nghe và thấu hiểu để đưa ra những giải pháp phù hợp nhất.
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-12 text-left order-1 order-md-0 ">
+            <br>
+            <span class="" data-key="Founded in 2021, Ease Tech proudly serves as a reliable companion for small and medium-sized enterprises on their journey to conquer the market. With the mission of creating an intelligent and efficient business environment, we continuously research and develop advanced technological solutions to help businesses optimize processes, save costs, and enhance productivity.">
             </span>
-            </div>
-            <div class="col-4" >
-                <img src="https://easetech.vn/wp-content/uploads/2024/09/banner_2.png" style="height: 100%; width: 100%; background-position: center; object-fit: cover"/>
-            </div>
+            <br>
+            <br>
+            <span class="" data-key="By combining the in-depth experience of our expert team with modern technology, Ease Tech is committed to providing comprehensive solutions that meet the diverse needs of businesses. We understand that technology is not just a tool, but also a bridge that helps businesses succeed. Therefore, Ease Tech always places customers at the center, ready to listen and understand in order to offer the most suitable solutions.">
+            </span>
+        </div>
+        <div class="col-md-4 col-12 order-sm-0 order-0 order-md-1" >
+            <img src="https://easetech.vn/wp-content/uploads/2024/09/banner_2.png" style="height: 100%; width: 100%; background-position: center; object-fit: cover" alt="banner-2"/>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div id="su-menh" style="padding: 15px">
+<div class="container" id="su-menh" style="padding: 15px">
         <div class="row">
             <div class="col-12">
-                <h1 class="desc text-center d-inline-block w-100">Sứ mệnh</h1>
+                <h1 class="desc text-center d-inline-block w-100" data-key="Mission">Sứ mệnh</h1>
             </div>
         </div>
 
-        <div class="row align-items-stretch" >
-            <div class="col-6 g-col-6 h-100 animate__animated animate__fadeInLeft d-flex flex-column">
+        <div class="row  gap-6" >
+            <div class="col-12 col-md-6 h-100 animate__animated animate__fadeInLeft ">
                 <div class="__box">
-                    <div style="margin-bottom: 20px">
-                        <img src="https://easetech.vn/wp-content/uploads/2024/09/core-1.png" alt="img-doi-voi-khach-hang">
+                    <div style="margin-bottom: 20px; height: 170px">
+                        <img src="https://easetech.vn/wp-content/uploads/2024/09/core-1.png" height="100%" alt="img-doi-voi-khach-hang">
                     </div>
 
-                    <h4 class="desc text-center d-inline-block w-100">Đối với khách hàng</h4>
+                    <h4 class="desc text-center d-inline-block w-100" data-key="For customers">Đối với khách hàng</h4>
                     <ul class="text-left __list-detail">
                         <li>
-                            <h6 class="font-weight-bold">Đặt khách hàng là trung tâm:</h6>
-                            <span>
+                            <h6 class="font-weight-bold" data-key="Putting customers at the center:">Đặt khách hàng là trung tâm:</h6>
+                            <span data-key="Always listen to and understand the needs of customers in order to provide the most suitable and effective solutions.">
                                     Luôn lắng nghe và thấu hiểu nhu cầu của khách hàng để đưa ra những giải pháp phù hợp và hiệu quả nhất.
-                                </span>
+                            </span>
                         </li>
                         <li>
-                            <h6 class="font-weight-bold">Các cung cấp giải phải toàn diện:</h6>
-                            <span>
-                                    Không chỉ cung cấp sản phẩm mà còn cung cấp dịch vụ tư vấn, hỗ trợ kỹ thuật và bảo trì bảo hành chuyên nghiệp.
-                                </span>
+                            <h6 class="font-weight-bold" data-key="Provide comprehensive solutions:">
+                                Các cung cấp giải phải toàn diện:
+                            </h6>
+                            <span data-key="Not only providing products but also offering professional consulting services, technical support, and maintenance warranty.">
+                                Không chỉ cung cấp sản phẩm mà còn cung cấp dịch vụ tư vấn, hỗ trợ kỹ thuật và bảo trì bảo hành chuyên nghiệp.
+                            </span>
                         </li>
                         <li>
-                            <h6 class="font-weight-bold">Cam kết chất lượng và hiệu quả:</h6>
-                            <span>
+                            <h6 class="font-weight-bold" data-key="Commitment to quality and effectiveness:">Cam kết chất lượng và hiệu quả:</h6>
+                            <span data-key="Ensure that products and services meet high quality standards, helping customers optimize processes, save costs, and enhance productivity.">
                                     Đảm bảo các sản phẩm và dịch vụ đạt chất lượng cao, giúp khách hàng tối ưu hóa quy trình, tiết kiệm chi phí và nâng cao năng suất.
-                                </span>
+                            </span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-6 g-col-6 h-100 animate__animated animate__fadeInRight d-flex flex-column" style="flex: 1">
+            <div class="ms-md-auto col-12 col-md-6 mt-4 mt-md-0 h-100 animate__animated animate__fadeInRight ">
                 <div class="__box">
-                    <div style="margin-bottom: 20px">
+                    <div style="margin-bottom: 20px; height: 170px">
                         <img src="https://easetech.vn/wp-content/uploads/2024/09/core-2.png" alt="img-doi-voi-doi-tac">
                     </div>
 
-                    <h4 class="desc text-center d-inline-block w-100">Đối với đối tác</h4>
-                    <ul class="text-left __list-detail">
-                        <li>
-                            <h6 class="font-weight-bold">Xây dựng mối quan hệ hợp tác lâu dài</h6>
-                            <span>
+                    <div>
+                        <h4 class="desc text-center d-inline-block w-100" data-key="For partners">Đối với đối tác</h4>
+                        <ul class="text-left __list-detail">
+                            <li>
+                                <h6 class="font-weight-bold" data-key="Build long-term collaborative relationships:">Xây dựng mối quan hệ hợp tác lâu dài:</h6>
+                                <span data-key="Create a win-win collaborative environment, developing together and sharing the results. Unity and commitment to common goals have helped us achieve significant success over the years.">
                                     Tạo dựng một môi trường hợp tác win-win, cùng nhau phát triển và chia sẻ thành quả. Đoàn kết và sự cam kết với mục tiêu chung đã giúp chúng tôi đạt được nhiều thành công trong những năm qua.
                                 </span>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
 </div>
 
-
-
-
 <div id="contact-container"></div>
+
+
+<div class="container">
+    <div id="doi-tac-va-khach-hang" style="padding: 15px">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="desc text-center d-inline-block w-100" data-key="Customer">Khách hàng</h1>
+            </div>
+        </div>
+
+        <div class="row align-items-stretch justify-content-center client-row" >
+            <div class="col-sm-6 col-md-3 text-center">
+                <img src="https://easetech.vn/wp-content/uploads/2024/09/1-3202.png" alt="Vietnam Airlines" class="client-logo">
+            </div>
+            <div class="col-sm-6 col-md-3 text-center">
+                <img src="https://easetech.vn/wp-content/uploads/2024/09/z5811553765809_98630f1a9f864f2e4f35cfeac757452c.jpg" alt="Viettravel Airlines" class="client-logo">
+            </div>
+            <div class="col-sm-6 col-md-3 text-center">
+                <img src="https://easetech.vn/wp-content/uploads/2024/08/2-1.png" alt="Jetstar" class="client-logo">
+            </div>
+            <div class="col-sm-6 col-md-3 text-center">
+                <img src="https://easetech.vn/wp-content/uploads/2024/09/ngs-logo.png" alt="TNG" class="client-logo">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <h1 class="desc text-center d-inline-block w-100" data-key="Partner">Đối tác</h1>
+            </div>
+        </div>
+        <div class="row align-items-stretch justify-content-center client-row">
+            <div class="col-sm-6 col-md-3 text-center">
+                <img src="https://easetech.vn/wp-content/uploads/2024/09/google.png" alt="Google" class="client-logo ">
+            </div>
+            <div class="col-sm-6 col-md-3 text-center">
+                <img src="https://easetech.vn/wp-content/uploads/2024/09/teachdata.png" alt="Teach Data" class="client-logo">
+            </div>
+            <div class="col-sm-6 col-md-3 text-center">
+                <img src="https://easetech.vn/wp-content/uploads/2024/09/securemetric.png" alt="Secure Metric" class="client-logo">
+            </div>
+            <div class="col-sm-6 col-md-3 text-center">
+                <img src="https://easetech.vn/wp-content/uploads/2024/09/spectra.png" alt="Spectra" class="client-logo">
+            </div>
+            <div class="col-sm-6 col-md-3 text-center">
+                <img src="https://easetech.vn/wp-content/uploads/2024/09/ibm.png" alt="IBM" class="client-logo">
+            </div>
+        </div>
+    </div>
+
+</div>
 
 <div id="footer"></div>
 
 
 
 <script src="js/bootstrap.min.js"></script>
-<script src="js/add_header.js"></script>
-<script src="js/add_footer.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        fetch('services/contact-section.html') // Đường dẫn đến file header.html
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('contact-container').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading header:', error));
-    });
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    var swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper(".mySwiper", {
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
     });
 </script>
+
+<script src="js/common.js"></script>
+
+
 </body>
 </html>
