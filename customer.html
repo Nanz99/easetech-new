@@ -55,14 +55,14 @@
 <div class="header-section">
     <div class="overlay">
         <div class="text-center">
-            <h1 id="headerTitle">KHÁCH HÀNG</h1>
-            <p id="breadcrumb"><a href="/index.html" class="link-home">Trang chủ</a> » khách hàng</p>
+            <h1 id="headerTitle" data-key="Customer">KHÁCH HÀNG</h1>
+            <p id="breadcrumb"><a href="/home.html" class="link-home" data-key="Home Page">Trang chủ</a> » <span data-key="Customer">khách hàng</span></p>
         </div>
     </div>
 </div>
 <div class="container text-center">
-    <h1 class="my-5">KHÁCH HÀNG TIÊU BIỂU CỦA EASETECH</h1>
-    <h6>Với nhiều năm kinh nghiệm, EASETECH đã trở thành đối tác tin cậy và uy tín cho nhiều dự án công nghệ thông tin, cung cấp các giải pháp chuyển đổi số cho doanh nghiệp. Bằng khát khao và đam mê sáng tạo không ngừng nghỉ, Gimasys luôn cố gắng thực hiện tốt nhất những cam kết của mình dành cho khách hàng và đối tác.</h6>
+    <h1 class="my-5 text-uppercase" data-key="Key clients of easetech">KHÁCH HÀNG TIÊU BIỂU CỦA EASETECH</h1>
+    <h6 data-key="With many years of experience, EASETECH has become a trusted and reputable partner for numerous information technology projects, providing digital transformation solutions for businesses. With an unwavering desire and passion for continuous innovation, Gimasys always strives to fulfill its commitments to customers and partners to the best of its ability.">Với nhiều năm kinh nghiệm, EASETECH đã trở thành đối tác tin cậy và uy tín cho nhiều dự án công nghệ thông tin, cung cấp các giải pháp chuyển đổi số cho doanh nghiệp. Bằng khát khao và đam mê sáng tạo không ngừng nghỉ, Gimasys luôn cố gắng thực hiện tốt nhất những cam kết của mình dành cho khách hàng và đối tác.</h6>
 
     <div class="row client-row">
         <div class="col-sm-6 col-md-3">
@@ -92,24 +92,8 @@
 <div id="footer"></div>
 
 <script src="js/bootstrap.min.js"></script>
-<script src="js/add_header.js"></script>
-<script src="js/add_header.js"></script>
-<script src="js/add_footer.js"></script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        fetch('services/contact-section.html') // Đường dẫn đến file header.html
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('contact-container').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading header:', error));
-    });
+<script src="js/common.js">
 </script>
 </body>
 </html>

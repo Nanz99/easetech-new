@@ -4,7 +4,6 @@ nav.navbar {
 nav.navbar .navbar-brand .logo {
     height: 40px;
     box-shadow: none !important;
-
 }
 nav.navbar .navbar-brand .logo:hover {
     height: 40px;

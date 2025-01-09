@@ -127,8 +127,8 @@
 <div class="header-section">
     <div class="overlay">
         <div class="text-center">
-            <h1 id="headerTitle">LIÊN HỆ</h1>
-            <p id="breadcrumb"><a href="/index.html" class="link-home">Trang chủ</a> » Liên hệ</p>
+            <h1 id="headerTitle" data-key="Contact">LIÊN HỆ</h1>
+            <p id="breadcrumb"><a href="/home.html" class="link-home" data-key="Home Page">Trang chủ</a> » <span data-key="Contact">Liên hệ</span></p>
         </div>
     </div>
 </div>
@@ -145,14 +145,14 @@
                 <!-- Form Section -->
                 <div class="col-lg-4 col-md-12">
                     <div class="">
-                        <h2 id="formTitle" class="text-white mb-4">Đăng ký nhận tư vấn</h2>
+                        <h2 id="formTitle" class="text-white mb-4" data-key="Register for Consultation">Đăng ký nhận tư vấn</h2>
                         <form>
                             <div class="mb-2">
-                                <label for="name" class="form-label text-white" id="labelName">Họ tên</label>
+                                <label for="name" class="form-label text-white" id="labelName" data-key="Full Name">Họ tên</label>
                                 <input type="text" class="form-control" id="name" placeholder="Nhập họ tên của bạn">
                             </div>
                             <div class="mb-2">
-                                <label for="phone" class="form-label text-white" id="labelPhone">Điện thoại</label>
+                                <label for="phone" class="form-label text-white" id="labelPhone" data-key="Cellphone">Điện thoại</label>
                                 <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại">
                             </div>
                             <div class="mb-2">
@@ -160,11 +160,11 @@
                                 <input type="email" class="form-control" id="email" placeholder="Nhập email">
                             </div>
                             <div class="mb-3">
-                                <label for="message" class="form-label text-white" id="labelMessage">Nội dung</label>
+                                <label for="message" class="form-label text-white" id="labelMessage" data-key="Content">Nội dung</label>
                                 <textarea class="form-control" id="message" rows="4" placeholder="Nhập nội dung cần tư vấn"></textarea>
                             </div>
                             <div class="w-100 text-center mt-1">
-                                <button type="submit" class="btn btn-primary btn-submit-contact" id="submitButton">Đăng ký ngay</button>
+                                <button type="submit" class="btn btn-primary btn-submit-contact" id="submitButton" data-key="Register Now">Đăng ký ngay</button>
                             </div>
                         </form>
                     </div>
@@ -178,49 +178,6 @@
 
 <!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/add_header.js"></script>
-<script src="js/add_footer.js"></script>
-<script>
-    const translations = {
-        vi: {
-            headerTitle: "LIÊN HỆ",
-            breadcrumb: "Trang chủ » Liên hệ",
-            formTitle: "Đăng ký nhận tư vấn",
-            labelName: "Họ tên",
-            labelPhone: "Điện thoại",
-            labelEmail: "Email",
-            labelMessage: "Nội dung",
-            submitButton: "Đăng ký ngay"
-        },
-        en: {
-            headerTitle: "CONTACT",
-            breadcrumb: "Home » Contact",
-            formTitle: "Sign Up for Consultation",
-            labelName: "Full Name",
-            labelPhone: "Phone",
-            labelEmail: "Email",
-            labelMessage: "Message",
-            submitButton: "Submit Now"
-        }
-    };
-
-    function setLanguage(lang) {
-        document.getElementById("headerTitle").textContent = translations[lang].headerTitle;
-        document.getElementById("breadcrumb").innerHTML = `<a href="/index.html" class="link-home">${translations[lang].breadcrumb.split('»')[0]}</a> » ${translations[lang].breadcrumb.split('»')[1]}`;
-        document.getElementById("formTitle").textContent = translations[lang].formTitle;
-        document.getElementById("labelName").textContent = translations[lang].labelName;
-        document.getElementById("labelPhone").textContent = translations[lang].labelPhone;
-        document.getElementById("labelEmail").textContent = translations[lang].labelEmail;
-        document.getElementById("labelMessage").textContent = translations[lang].labelMessage;
-        document.getElementById("submitButton").textContent = translations[lang].submitButton;
-    }
-
-    document.getElementById("languageSelector").addEventListener("change", (e) => {
-        setLanguage(e.target.value);
-    });
-
-    // Set default language to Vietnamese
-    setLanguage("vi");
-</script>
+<script src="js/common.js" ></script>
 </body>
 </html>
