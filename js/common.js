@@ -11,6 +11,20 @@
         })
         .catch(error => console.error('Error loading header:', error));
 
+    fetch('js/header.js')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(scriptContent => {
+            const script = document.createElement('script');
+            script.text = scriptContent;
+            document.body.appendChild(script);
+        })
+        .catch(error => console.error('There was a problem with the fetch operation:', error));
+
     fetch('../services/contact-section.html') // Đường dẫn đến file header.html
         .then(response => {
             if (!response.ok) {
@@ -30,19 +44,7 @@
         })
         .catch(error => console.error('Lỗi:', error));
 
-    fetch('js/header.js')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(scriptContent => {
-            const script = document.createElement('script');
-            script.text = scriptContent;
-            document.body.appendChild(script);
-        })
-        .catch(error => console.error('There was a problem with the fetch operation:', error));
+
 
     fetch('js/lang.js')
         .then(response => {
